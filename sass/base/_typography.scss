@@ -20,10 +20,10 @@
     }
 }
 .heading-secondary{
-    display: inline-block;
     font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
+    display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     background-clip: text;
     -webkit-background-clip: text;
