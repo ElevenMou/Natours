@@ -25,6 +25,10 @@
         background-color: $color-white;
         color: $color-grey;
     }
+    &--primary {
+        background-color: $color-primary;
+        color: $color-white;
+    }
 
     &--animated {
         animation: moveInButton 1s ease-out;
