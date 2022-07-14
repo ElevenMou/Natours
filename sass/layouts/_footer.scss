@@ -14,7 +14,7 @@
     &__navigation{
         display: inline-block;
         border-top: 1px solid $color-grey-dark;
-
+        padding: 1.5rem 1rem;
     }
     &__list{
         list-style: none;
@@ -46,6 +46,7 @@
     &__copyright{
         display: inline-block;
         border-top: 1px solid $color-grey-dark;
+        padding: 1.5rem 1rem;
     }
 
 

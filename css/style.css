@@ -161,7 +161,8 @@ body {
     height: auto; }
   .footer__navigation {
     display: inline-block;
-    border-top: 1px solid #999; }
+    border-top: 1px solid #999;
+    padding: 1.5rem 1rem; }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -180,7 +181,8 @@ body {
     transform: rotate(5deg) scale(1.3); }
   .footer__copyright {
     display: inline-block;
-    border-top: 1px solid #999; }
+    border-top: 1px solid #999;
+    padding: 1.5rem 1rem; }
 
 .btn, .btn:link, .btn:visited {
   /* <a><\a> */
