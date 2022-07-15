@@ -621,13 +621,32 @@ body {
       transform: rotate(-135deg); }
 
 .popup {
+  opacity: 0;
+  visibility: hidden;
   z-index: 2001;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close:link, .popup__close:visited {
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #999; }
+  .popup__close:hover {
+    color: #55c57a; }
   .popup__content {
     background-color: #fff;
     width: 75%;
