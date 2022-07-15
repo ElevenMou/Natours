@@ -82,58 +82,74 @@
         }
     }
 
-    &__checkbox:checked ~ &__bg {
+    &__checkbox:checked~&__bg {
         transform: scale(80);
     }
-    &__checkbox:checked ~ &__nav {
+
+    &__checkbox:checked~&__nav {
         width: 100vw;
         height: 100vh;
         top: 0;
         right: 0;
         opacity: 1;
     }
-    &__icon{
+
+    &__icon {
         position: relative;
         top: 3.25rem;
-        
+
         &,
         &::after,
-        &::before{
+        &::before {
             width: 3.5rem;
             height: .2rem;
             background-color: $color-grey-dark-2;
             display: inline-block;
         }
+
         &::after,
-        &::before{
+        &::before {
             content: "";
             position: absolute;
             left: 0;
             transition: all .4s ease;
         }
-        &::after{
+
+        &::after {
             top: .8rem;
         }
-        &::before{
+
+        &::before {
             top: -.8rem;
         }
     }
+
     &__button:hover &__icon {
+
         transform: scale(1.1);
-        &::after{
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+
+        &::after {
             top: 1.2rem;
         }
-        &::before{
+
+        &::before {
             top: -1.2rem;
         }
     }
-    &__checkbox:checked + &__button &__icon {
+
+    &__checkbox:checked+&__button &__icon {
         background-color: transparent;
-        &::after{
+
+        &::after {
             top: 0;
             transform: rotate(135deg);
         }
-        &::before{
+
+        &::before {
             top: 0;
             transform: rotate(-135deg);
         }
