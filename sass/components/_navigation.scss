@@ -17,6 +17,10 @@
         right: 6.2rem;
         z-index: 2000;
         text-align: center;
+        &--close{
+            display: none;
+            z-index: 3000;
+        }
         @include respond(phone) {
             top: 3rem;
         }
@@ -36,6 +40,7 @@
         right: 6.5rem;
         z-index: 1000;
         transition: transform .6s ease-in;
+
         @include respond(phone) {
             top: 2.8rem;
         }
@@ -94,17 +99,28 @@
         }
     }
 
-    &__checkbox:checked~&__bg {
+    /* &__checkbox:checked~&__bg {
+        transform: scale(80);
+    } */
+
+    &:target &__bg {
         transform: scale(80);
     }
-
-    &__checkbox:checked~&__nav {
+    &:target &__nav {
         width: 100vw;
         height: 100vh;
         top: 0;
         right: 0;
         opacity: 1;
     }
+
+    /* &__checkbox:checked~&__nav {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        opacity: 1;
+    } */
 
     &__icon {
         position: relative;
@@ -153,7 +169,7 @@
         }
     }
 
-    &__checkbox:checked+&__button &__icon {
+    /* &__checkbox:checked+ &__button &__icon {
         background-color: transparent;
 
         &::after {
@@ -165,6 +181,23 @@
             top: 0;
             transform: rotate(-135deg);
         }
+    } */
+
+    &:target &__button &__icon {
+        background-color: transparent;
+
+        &::after {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+    &:target &__button--close {
+        display: inline-block;
     }
 
 }

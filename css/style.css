@@ -692,7 +692,30 @@ body {
   opacity: 1; }
 
 .navigation {
-  transition: all .4s ease; }
+  transition: all .4s ease;
+  /* &__checkbox:checked~&__bg {
+        transform: scale(80);
+    } */
+  /* &__checkbox:checked~&__nav {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        opacity: 1;
+    } */
+  /* &__checkbox:checked+ &__button &__icon {
+        background-color: transparent;
+
+        &::after {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    } */ }
   .navigation__checkbox {
     display: none; }
   .navigation__button {
@@ -707,6 +730,9 @@ body {
     right: 6.2rem;
     z-index: 2000;
     text-align: center; }
+    .navigation__button--close {
+      display: none;
+      z-index: 3000; }
     @media (max-width: 37.5em) {
       .navigation__button {
         top: 3rem; } }
@@ -767,9 +793,9 @@ body {
       transform: translateX(1rem) scale(1.2); }
     .navigation__link span {
       margin-right: 1.5rem; }
-  .navigation__checkbox:checked ~ .navigation__bg {
+  .navigation:target .navigation__bg {
     transform: scale(80); }
-  .navigation__checkbox:checked ~ .navigation__nav {
+  .navigation:target .navigation__nav {
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -802,14 +828,16 @@ body {
       top: 1.2rem; }
     .navigation__button:hover .navigation__icon::before {
       top: -1.2rem; }
-  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+  .navigation:target .navigation__button .navigation__icon {
     background-color: transparent; }
-    .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    .navigation:target .navigation__button .navigation__icon::after {
       top: 0;
       transform: rotate(135deg); }
-    .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    .navigation:target .navigation__button .navigation__icon::before {
       top: 0;
       transform: rotate(-135deg); }
+  .navigation:target .navigation__button--close {
+    display: inline-block; }
 
 .popup {
   opacity: 0;
