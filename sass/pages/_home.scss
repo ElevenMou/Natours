@@ -2,6 +2,10 @@
     background-color: $color-grey-light-1;
     padding: 20rem 0;
     margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding: 32rem 0;
+    }
 }
 
 .section-features {
@@ -16,38 +20,65 @@
     background-size: cover;
     -webkit-clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
     clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
+
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 95vh, 0 100%);
+        clip-path: polygon(0 10vh, 100% 0, 100% 95vh, 0 100%);
+        height: auto;
+        padding: 15rem 0;
+    }
 }
 
 .section-tours {
     padding: 15rem 0;
     margin-top: -15vh;
     background-color: $color-grey-light-1;
+    @include respond(tab-port) {
+        padding: 22rem 0;
+    }
 }
 
 .section-story {
     position: relative;
     padding: 15rem 0;
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
-    padding: 15rem 0;
+    padding: 15rem 5rem;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    @include respond(tab-land) {
+        padding: 10rem 5rem;
+    }
 
 }
 
 .book {
-    height: 50rem;
     background-image: linear-gradient(105deg,
             rgba($color-white, .9) 0%,
             rgba($color-white, .9) 50%,
-            transparent 50%
-        ),
+            transparent 50%),
         url(../img/nat-10.jpg);
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-    &__form{
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(105deg,
+            rgba($color-white, .9) 0%,
+            rgba($color-white, .9) 70%,
+            transparent 70%),
+        url(../img/nat-10.jpg);
+    }
+
+    &__form {
         width: 50%;
         padding: 6rem;
+        @include respond(tab-port) {
+            padding: 5rem;
+            width: 70%;
+        }
     }
 }

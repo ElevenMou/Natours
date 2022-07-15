@@ -4,6 +4,11 @@
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
     }
+    @include respond(tab-port) {
+        max-width: 80rem;
+        padding: 0 4rem;
+    }
+
     &::after{
         content: "";
         display: table;
@@ -13,6 +18,13 @@
         float: left;
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: 6rem !important;
+            }
+        }
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
     .col-1-of-2{

@@ -17,6 +17,12 @@
         right: 6.2rem;
         z-index: 2000;
         text-align: center;
+        @include respond(phone) {
+            top: 3rem;
+        }
+        @include respond(tab-port) {
+            top: 3rem;
+        }
     }
 
     &__bg {
@@ -30,6 +36,12 @@
         right: 6.5rem;
         z-index: 1000;
         transition: transform .6s ease-in;
+        @include respond(phone) {
+            top: 2.8rem;
+        }
+        @include respond(tab-port) {
+            top: 2.8rem;
+        }
     }
 
     &__nav {

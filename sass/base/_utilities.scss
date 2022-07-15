@@ -5,7 +5,19 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 62.5%; // 10px
+    
+    @include respond(tab-land){
+        font-size: 56.25%;        //1rem = 9px , 9/18 = 56.25%
+    }
+    @include respond(tab-port){
+        font-size: 50%;         //1rem = 8px , 8/18 = 50%
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%;            //1rem = 12px , 12/18
+    }
+
 }
 
 body {
@@ -15,21 +27,36 @@ body {
     line-height: 1.7;
     color: $color-grey;
     padding: 3rem;
+    @include respond(tab-port){
+        padding: 0;
+    }
 }
 
 .u-center-text {
     text-align: center;
 }
 .u-margin-bottom-small{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
+    @include respond(tab-port) {
+        margin-bottom: 1rem !important;
+    }
 }
 .u-margin-bottom-medium {
-    margin-bottom: 4rem;
+    margin-bottom: 4rem !important;
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
 }
 .u-margin-bottom-big {
-    margin-bottom: 8rem;
+    margin-bottom: 8rem !important;
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
 }
 
 .u-margin-top-big {
-    margin-top: 8rem;
+    margin-top: 8rem !important;
+    @include respond(tab-port) {
+        margin-top: 5rem !important;
+    }
 }

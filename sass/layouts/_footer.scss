@@ -2,10 +2,21 @@
     background-color: $color-grey-dark-2;
     padding: 10rem 0;
     font-size: 1.4rem;
-
+    @include respond(phone) {
+        padding: 5rem 0;
+    }
+    @include respond(tab-port) {
+        padding: 5rem 0;
+    }
     &__logo-box {
         margin-bottom: 8rem;
         text-align: center;
+        @include respond(phone) {
+            margin-bottom: 5rem;
+        }
+        @include respond(tab-port) {
+            margin-bottom: 5rem;
+        }
     }
     &__logo{
         width: 15rem;
@@ -15,6 +26,16 @@
         display: inline-block;
         border-top: 1px solid $color-grey-dark;
         padding: 1.5rem 1rem;
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
     }
     &__list{
         list-style: none;
@@ -44,9 +65,19 @@
 
     }
     &__copyright{
-        display: inline-block;
+        float: right;
         border-top: 1px solid $color-grey-dark;
         padding: 1.5rem 1rem;
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
     }
 
 
