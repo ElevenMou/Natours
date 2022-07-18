@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/app.scss css/style.css -w"
+    "watch:sass": "node-sass sass/app.scss css/style.css -w",
+    "compile:sass": "node-sass sass/app.scss css/style.comp.css"
   },
   "keywords": [
     "eleven"
   ],
-  "author": "moussa",
+  "author": "elevenMou",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1"
